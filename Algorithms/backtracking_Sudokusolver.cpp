@@ -1,4 +1,5 @@
 //SUDOKU SOLVER using Recursion and BackTracking
+//BackTracking
 #include <bits/stdc++.h>
 using namespace std;
 bool checkplacenumber(int mat[9][9],int i,int j,int number,int n){
@@ -47,6 +48,7 @@ bool solvesudoku(int mat[9][9],int i,int j,int n){
 
 }
 int main() {
+    //you can take user input instead
   int mat[9][9]={{3, 0, 6, 5, 0, 8, 4, 0, 0},  
                       {5, 2, 0, 0, 0, 0, 0, 0, 0},  
                       {0, 8, 7, 0, 0, 0, 0, 3, 1},  
