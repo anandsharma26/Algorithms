@@ -14,6 +14,21 @@ int longest_common_subsequence(string s1,string s2){
             }
         }
     }
+    
+    //PRINTING LCS SEQUENCE
+     //for(int i=0;i<=m;i++){for(int j=0;j<=n;j++){cout<<dp[i][j]<<" ";}cout<<endl;}
+ int lenpos=dp[m][n];
+ char s[lenpos+1];
+ s[lenpos]='\0';
+ int i=m;
+ int j=n;
+ while(i>=0&&j>=0){
+     if(s1[i-1]==s2[j-1]){s[lenpos-1]=s1[i-1];lenpos--;i--;j--;}
+     else if(dp[i-1][j]>dp[i][j-1]){i--;}
+     else {j--;}
+     
+ }
+cout<<s<<endl;
 
     return dp[m][n];
     
